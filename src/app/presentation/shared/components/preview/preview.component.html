@@ -1,0 +1,17 @@
+<div (window:resize)="calculateWeight()"></div>
+<div class="container" #imageContainer>
+  <img *ngIf="avatarImage && avatarRectangle && avatarScale"
+       [src]="avatarImage"
+       alt="avatar"
+       class="avatar"
+       cdkDrag
+       [cdkDragBoundary]="imageContainer"
+       (cdkDragStarted)="avatarRelativeRectangle = calculateRelativeAvatarRectangle(avatarRectangle)"
+       (cdkDragMoved)="onAvatarRectangleDrag($event)"
+       (cdkDragEnded)="onAvatarRectangleDragEnd()"
+       [cdkDragFreeDragPosition]="avatarRelativeRectangle ? avatarRelativeRectangle.topLeftPoint : avatarRectangle.topLeftPoint"
+       [ngStyle]="{
+        'width': avatarWidth(avatarRectangle, avatarScale),
+        'height': avatarHeight(avatarRectangle, avatarScale)
+        }">
+</div>

@@ -1,0 +1,57 @@
+@import "../../../../../weights";
+@import "../../../../../colors";
+@import "../../../../../sizes";
+
+
+// Header
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  min-height: 8vh;
+  background-color: $accent-color;
+
+  font-size: $fs-desktop-label;
+
+  .logo {
+    font-weight: $fw-bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: $fs-desktop-heading-2;
+    gap: 15px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 50px;
+
+    &__point {
+      cursor: pointer;
+      color: $dark-color-2;
+      font-weight: $fw-bold;
+
+      &:hover {
+        color: $dark-color;
+      }
+    }
+  }
+
+  .profile-button {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+// Main
+main {
+  //height: 92vh;
+  //overflow: clip;
+  padding-top: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+}

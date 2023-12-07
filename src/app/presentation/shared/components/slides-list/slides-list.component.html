@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="slides">
+    <div *ngFor="let slide of slides; let i = index"
+         class="slides__item"
+         [ngClass]="{'slides__item-selected': selectedIndex == i}"
+         (click)="selectSlide(i)">
+      <img [src]="slide.backgroundImageChoicePaths[slide.backgroundImage]" alt="Slide">
+      <div class="slides__item-num">
+        <span class="slides__item-num__inner">{{ i + 1 }}</span>
+      </div>
+    </div>
+  </div>
+</div>

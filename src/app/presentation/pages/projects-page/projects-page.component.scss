@@ -1,0 +1,122 @@
+@import "../../../../colors";
+@import "../../../../weights";
+@import "../../../../sizes";
+
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+
+  .subheading {
+    font-weight: $fw-bold;
+
+    span {
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .processed {
+      color: $green-color;
+    }
+
+    .unprocessed {
+      color: $red-color;
+    }
+  }
+
+  .projects {
+    display: flex;
+    gap: 20px;
+
+    .separator {
+      border-left: 3px solid $input-dark-color;
+    }
+  }
+
+  .left-side-container, .right-side-container {
+    width: 49%;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+
+    .separator {
+      border-top: 3px solid $input-dark-color;
+    }
+  }
+
+  .project {
+    font-size: $fs-desktop-subheading;
+    font-weight: $fw-bold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__main, &__additional {
+      background: $input-color;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &:hover {
+        background: $input-dark-color;
+      }
+    }
+
+    &__main {
+      flex: 1 1 auto;
+    }
+
+    &__additional {
+      display: none;
+
+      .project__delete {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__id, &__time, &__date {
+      width: 20%;
+    }
+
+    &:hover .project__additional {
+      display: flex;
+    }
+
+    &__processed {
+      border: 2px solid;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: $fs-desktop-label;
+      background: $white-color;
+
+      span {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+
+    .processed-badge {
+      border-color: $green-color;
+      color: $green-color;
+    }
+
+    .unprocessed-badge {
+      border-color: $red-color;
+      color: $red-color;
+    }
+  }
+}

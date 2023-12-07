@@ -1,0 +1,29 @@
+@import "../../../../../colors";
+
+
+* {
+  transition: none;
+}
+
+.container {
+  //width: 96vh;
+  //height: 54vh;
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.avatar {
+  position: absolute;
+  border: solid 3px $accent-color;
+  border-radius: 5px;
+  z-index: 3;
+  //stroke-width: 2px;
+  //stroke: green;
+  //fill-opacity: 0;
+  cursor: grab;
+}
